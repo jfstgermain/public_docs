@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cheatsheet SYSTEM "http://cheatsheetviewer.com/cheatsheet.dtd">
+<cheatsheet>
+    <info>
+        <name>Vim</name>
+        <author>Nana Långstedt</author>
+        <website>http://www.tuxfiles.org/linuxhelp/vimcheat.html</website>
+        <original_file>http://www.tuxfiles.org/linuxhelp/vimcheat.html</original_file>
+    </info>
+    <section title="Working with files">
+        <item>
+            <code>:e filename</code>
+            <text pos="right">Open a new file. You can use the Tab key for automatic file name completion, just like at the shell command prompt.</text>
+        </item>
+        <item>
+            <code>:w filename</code>
+            <text pos="right">Save changes to a file. If you don't specify a file name, Vim saves as the file name you were editing. For saving the file under a different name, specify the file name.</text>
+        </item>
+        <item>
+            <code>:q</code>
+            <text pos="right">Quit Vim. If you have unsaved changes, Vim refuses to exit.</text>
+        </item>
+        <item>
+            <code>:q!</code>
+            <text pos="right">Exit Vim without saving changes.</text>
+        </item>
+        <item>
+            <code>:wq</code>
+            <text pos="right">Write the file and exit.</text>
+        </item>
+        <item>
+            <code>:x</code>
+            <text pos="right">Almost the same as <code>:wq</code>, write the file and exit if you've made changes to the file. If you haven't made any changes to the file, Vim exits without writing the file.</text>
+        </item>
+    </section>
+    <section title="Moving around in the file">
+        <item>
+            <code>j or Up Arrow</code>
+            <text pos="right">Move the cursor up one line.</text>
+        </item>
+        <item>
+            <code>k or Down Arrow</code>
+            <text pos="right">Down one line.</text>
+        </item>
+        <item>
+            <code>h or Left Arrow</code>
+            <text pos="right">Left one character.</text>
+        </item>
+        <item>
+            <code>l or Right Arrow</code>
+            <text pos="right">Right one character.</text>
+        </item>
+        <item>
+            <code>e</code>
+            <text pos="right">To the end of a word.</text>
+        </item>
+        <item>
+            <code>E</code>
+            <text pos="right">To the end of a whitespace-delimited word.</text>
+		</item>
+		<item>
+            <code>w</code>
+            <text pos="right">To the end of a word (including punctuation signs).</text>
+        </item>
+		<item>
+            <code>W</code>
+            <text pos="right">To the end of a word (non-blank character sequence).</text>
+        </item>
+
+        <item>
+            <code>b</code>
+            <text pos="right">To the beginning of a word.</text>
+        </item>
+        <item>
+            <code>B</code>
+            <text pos="right">To the beginning of a whitespace-delimited word.</text>
+		</item>
+		<item>
+            <code>f</code>
+			<text pos="right">Move to [count]'th occurrence of {char} to the right. The cursor is placed on {char} (inclusive).</text>
+        </item>
+		<item>
+            <code>F</code>
+			<text pos="right">Move to the [count]'th occurrence of {char} to the left. The cursor is placed on {char} (inclusive).</text>
+        </item>
+		<item>
+            <code>G</code>
+			<text pos="right">Goto line [count], default last line, on the first non-blank character.</text>
+        </item>
+		<item>
+            <code>gg</code>
+			<text pos="right">Goto line [count], default first line, on the first non-blank character.</text>
+        </item>
+
+        <item>
+            <code>0</code>
+            <text pos="right">To the beginning of a line.</text>
+        </item>
+        <item>
+            <code>^</code>
+            <text pos="right">To the first non-whitespace character of a line.</text>
+        </item>
+        <item>
+            <code>$</code>
+            <text pos="right">To the end of a line.</text>
+        </item>
+        <item>
+            <code>H</code>
+            <text pos="right">To the first line of the screen.</text>
+        </item>
+        <item>
+            <code>M</code>
+            <text pos="right">To the middle line of the screen.</text>
+        </item>
+        <item>
+            <code>L</code>
+            <text pos="right">To the the last line of the screen.</text>
+        </item>
+        <item>
+            <code>:n</code>
+            <text pos="right">Jump to line number n. For example, to jump to line 42, you'd type :42</text>
+        </item>
+    </section>
+    <section title="Inserting and overwriting text">
+        <item>
+            <code>i</code>
+            <text pos="right">Insert before cursor.</text>
+        </item>
+        <item>
+            <code>I</code>
+            <text pos="right">Insert to the start of the current line.</text>
+        </item>
+        <item>
+            <code>a</code>
+            <text pos="right">Append after cursor.</text>
+        </item>
+        <item>
+            <code>A</code>
+            <text pos="right">Append to the end of the current line.</text>
+        </item>
+        <item>
+            <code>o</code>
+            <text pos="right">Open a new line below and insert.</text>
+        </item>
+        <item>
+            <code>O</code>
+            <text pos="right">Open a new line above and insert.</text>
+        </item>
+        <item>
+            <code>C</code>
+            <text pos="right">Change the rest of the current line.</text>
+        </item>
+        <item>
+            <code>r</code>
+            <text pos="right">Overwrite one character. After overwriting the single character, go back to command mode.</text>
+        </item>
+        <item>
+            <code>R</code>
+            <text pos="right">Enter insert mode but replace characters rather than inserting.</text>
+        </item>
+        <item>
+            <code>The ESC key</code>
+            <text pos="right">Exit insert/overwrite mode and go back to command mode.</text>
+        </item>
+    </section>
+    <section title="Deleting text">
+        <item>
+            <code>x</code>
+            <text pos="right">Delete characters under the cursor.</text>
+        </item>
+        <item>
+            <code>X</code>
+            <text pos="right">Delete characters before the cursor.</text>
+        </item>
+        <item>
+            <code>dd or :d</code>
+            <text pos="right">Delete the current line.</text>
+        </item>
+    </section>
+    <section title="Entering visual mode">
+        <item>
+            <code>v</code>
+            <text pos="right">Start highlighting characters. Use the normal movement keys and commands to select text for highlighting.</text>
+        </item>
+        <item>
+            <code>V</code>
+            <text pos="right">Start highlighting lines.</text>
+        </item>
+        <item>
+            <code>The ESC key</code>
+            <text pos="right">Exit visual mode and return to command mode.</text>
+        </item>
+    </section>
+    <split/>
+    <section title="Editing blocks of text">
+        <item>
+            <text><light>Note: the Vim commands marked with (V) work in visual mode, when you've selected some text. The other commands work in the command mode, when you haven't selected any text.</light></text>
+        </item>
+        <item>
+            <code>~</code>
+            <text pos="right">Change the case of characters. This works both in visual and command mode. In visual mode, change the case of highlighted characters. In command mode, change the case of the character uder cursor.</text>
+        </item>
+        <item>
+            <code>&gt; (V)</code>
+            <text pos="right">Shift right (indent).</text>
+        </item>
+        <item>
+            <code>&lt; (V)</code>
+            <text pos="right">Shift left (de-indent).</text>
+        </item>
+        <item>
+            <code>c (V)</code>
+            <text pos="right">Change the highlighted text.</text>
+        </item>
+        <item>
+            <code>y (V)</code>
+            <text pos="right">Yank the highlighted text. In Windows terms, "copy the selected text to clipboard."</text>
+        </item>
+        <item>
+            <code>d (V)</code>
+            <text pos="right">Delete the highlighted text. In Windows terms, "cut the selected text to clipboard."</text>
+        </item>
+        <item>
+            <code>yy or :y or Y</code>
+            <text pos="right">Yank the current line. You don't need to highlight it first.</text>
+        </item>
+        <item>
+            <code>dd or :d</code>
+            <text pos="right">Delete the current line. Again, you don't need to highlight it first.</text>
+        </item>
+        <item>
+            <code>p</code>
+            <text pos="right">Put the text you yanked or deleted. In Windows terms, "paste the contents of the clipboard". Put characters after the cursor. Put lines below the current line.</text>
+        </item>
+        <item>
+            <code>P</code>
+            <text pos="right">Put characters before the cursor. Put lines above the current line.</text>
+        </item>
+    </section>
+    <section title="Undo and redo">
+        <item>
+            <code>u</code>
+            <text pos="right">Undo the last action.</text>
+        </item>
+        <item>
+            <code>U</code>
+            <text pos="right">Undo all the latest changes that were made to the current line.</text>
+        </item>
+        <item>
+            <code>Ctrl + r</code>
+            <text pos="right">Redo.</text>
+        </item>
+    </section>
+    <section title="Search">
+        <item>
+            <code>/pattern</code>
+            <text pos="right">Search the file for pattern.</text>
+        </item>
+        <item>
+            <code>n</code>
+            <text pos="right">Scan for next search match in the same direction.</text>
+        </item>
+        <item>
+            <code>N</code>
+            <text pos="right">Scan for next search match but opposite direction.</text>
+        </item>
+    </section>
+    <section title="Replace">
+        <item>
+            <code>:rs/foo/bar/a</code>
+            <text pos="right">Substitute foo with bar. r determines the range and a determines the arguments.</text>
+        </item>
+        <subsection title="The range (r) can be">
+            <item>
+                <text>nothing</text>
+                <text pos="right">Work on current line only.</text>
+            </item>
+            <item>
+                <text>number</text>
+                <text pos="right">Work on the line whose number you give.</text>
+            </item>
+            <item>
+                <code>%</code>
+                <text pos="right">The whole file.</text>
+            </item>
+        </subsection>
+        <subsection title="Examples">
+            <item>
+                <code>:452s/foo/bar/</code>
+                <text pos="right">Replace the first occurrence of the word foo with bar on line number 452.</text>
+            </item>
+            <item>
+                <code>:s/foo/bar/g</code>
+                <text pos="right">Replace every occurrence of the word foo with bar on current line.</text>
+            </item>
+            <item>
+                <code>:%s/foo/bar/g</code>
+                <text pos="right">Replace every occurrence of the word foo with bar in the whole file.</text>
+            </item>
+            <item>
+                <code>:%s/foo/bar/gi</code>
+                <text pos="right">The same as above, but ignore the case of the pattern you want to substitute. This replaces foo, FOO, Foo, and so on.</text>
+            </item>
+            <item>
+                <code>:%s/foo/bar/gc</code>
+                <text pos="right">Confirm every substitution.</text>
+            </item>
+            <item>
+                <code>:%s/foo/bar/c</code>
+                <text pos="right">For each line on the file, replace the first occurrence of foo with bar and confirm every substitution.</text>
+            </item>
+        </subsection>
+    </section>
+</cheatsheet>
